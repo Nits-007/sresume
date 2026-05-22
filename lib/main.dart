@@ -39,7 +39,8 @@ class KawaiiResumePage extends StatefulWidget {
 class _KawaiiResumePageState extends State<KawaiiResumePage>
     with TickerProviderStateMixin {
   final AudioPlayer _audioPlayer = AudioPlayer();
-  bool _isPlaying = true;
+  bool _isPlaying = false;
+  bool _hasStarted = false;
   late ConfettiController _confettiController;
   late final AnimationController _bgController;
   late final AnimationController _pulseController;
@@ -47,7 +48,7 @@ class _KawaiiResumePageState extends State<KawaiiResumePage>
   @override
   void initState() {
     super.initState();
-    _startBgm();
+    // Removed _startBgm() due to browser autoplay policies
 
     _confettiController =
         ConfettiController(duration: const Duration(seconds: 3));
@@ -99,7 +100,12 @@ class _KawaiiResumePageState extends State<KawaiiResumePage>
             if (_isPlaying) {
               _audioPlayer.pause();
             } else {
-              _audioPlayer.resume();
+              if (!_hasStarted) {
+                _startBgm();
+                _hasStarted = true;
+              } else {
+                _audioPlayer.resume();
+              }
             }
             _isPlaying = !_isPlaying;
           });

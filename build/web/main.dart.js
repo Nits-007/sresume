@@ -20727,8 +20727,8 @@ Ga:function Ga(a){this.a=a},
 u_:function u_(a){this.a=a},
 K1:function K1(a,b,c){var _=this
 _.d=a
-_.e=!0
-_.w=_.r=_.f=$
+_.f=_.e=!1
+_.x=_.w=_.r=$
 _.cr$=b
 _.aW$=c
 _.c=_.a=null},
@@ -64630,16 +64630,15 @@ aj(){return new A.K1(A.aoN(),null,null)}}
 A.K1.prototype={
 aq(){var s,r=this,q=null
 r.aU()
-r.nY()
-r.f=new A.Bx(B.jF,B.fC,$.aL())
+r.r=new A.Bx(B.jF,B.fC,$.aL())
 s=A.d5(q,B.A1,q,q,r)
 s.pt(0,!0)
-r.r!==$&&A.bs()
-r.r=s
+r.w!==$&&A.bs()
+r.w=s
 s=A.d5(q,B.dJ,q,q,r)
 s.pt(0,!0)
-r.w!==$&&A.bs()
-r.w=s},
+r.x!==$&&A.bs()
+r.x=s},
 nY(){var s=0,r=A.H(t.H),q=this,p
 var $async$nY=A.I(function(a,b){if(a===1)return A.E(b,r)
 while(true)switch(s){case 0:p=q.d
@@ -64651,25 +64650,25 @@ case 3:return A.F(null,r)}})
 return A.G($async$nY,r)},
 l(){var s,r=this
 r.d.l()
-s=r.f
+s=r.r
 s===$&&A.a()
 s.b=B.fD
 s.ag()
 s.dr()
-s=r.r
+s=r.w
 s===$&&A.a()
 s.l()
-s=r.w
+s=r.x
 s===$&&A.a()
 s.l()
 r.Rc()},
 W(b1){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5=this,a6=null,a7=1e6,a8=8e5,a9=a5.e?A.adJ(A.fH(B.AS,new A.a7I()),A.bp(a7,0),a6):B.AT,b0=a5.e?"\ud83c\udfb5 BGM On":"\ud83d\udd08 BGM Off"
 b0=A.adJ(A.aiS(A.FA(A.fH(new A.CF(a9,B.fq,new A.a7J(a5),B.hY,10,!0,B.vu,A.fw(b0,A.zY().$3$color$fontSize$fontWeight(B.j,16,B.aQ),a6),a6),a6),a6,a6,A.bp(5e5,0),A.bp(5e5,0),a6)),a6,a6)
-a9=a5.r
+a9=a5.w
 a9===$&&A.a()
 a9=A.jE(a9,new A.a7K(a5),a6)
 s=A.as9(0,B.Aw)
-r=a5.f
+r=a5.r
 r===$&&A.a()
 q=A.b0(217,B.j.gm(0)>>>16&255,B.j.gm(0)>>>8&255,B.j.gm(0)&255)
 p=A.eH(50)
@@ -64677,7 +64676,7 @@ o=A.lv(B.j,8)
 n=t.sq
 m=A.b([new A.dw(15,B.aH,A.b0(B.c.al(76.5),B.b5.gm(0)>>>16&255,B.b5.gm(0)>>>8&255,B.b5.gm(0)&255),B.i,40)],n)
 l=t.H7
-k=a5.w
+k=a5.x
 k===$&&A.a()
 k=A.eN(B.fE,k,a6)
 j=A.b([B.fq,B.jl],t.t_)
@@ -64732,19 +64731,20 @@ $S:48}
 A.a7J.prototype={
 $0(){var s=this.a
 s.aI(new A.a7H(s))
-s=s.f
+s=s.r
 s===$&&A.a()
 s.b=B.dE
 s.ag()},
 $S:0}
 A.a7H.prototype={
-$0(){var s=this.a,r=s.d
-if(s.e)r.eO(0)
-else r.d1(0)
+$0(){var s=this.a
+if(s.e)s.d.eO(0)
+else if(!s.f){s.nY()
+s.f=!0}else s.d.d1(0)
 s.e=!s.e},
 $S:0}
 A.a7K.prototype={
-$2(a,b){var s=null,r=this.a.r
+$2(a,b){var s=null,r=this.a.w
 r===$&&A.a()
 r=r.x
 r===$&&A.a()
@@ -64760,7 +64760,7 @@ A.a7M.prototype={
 $1(a){return a.pt(0,!0)},
 $S:48}
 A.a7N.prototype={
-$0(){var s=this.a.f
+$0(){var s=this.a.r
 s===$&&A.a()
 s.b=B.dE
 s.ag()},
